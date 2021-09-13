@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
+//!!
+// login placeholder code from here
+// https://serverless-stack.com/chapters/create-a-login-page.html
 
 export default function Login() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   function validateForm() {
-    return email.length > 0 && password.length > 0;
+    return username.length > 0 && password.length > 0;
   }
 
   function handleSubmit(event) {
@@ -19,12 +22,12 @@ export default function Login() {
     <div className="Login">
       <Form onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="email">
-          <Form.Label>Email</Form.Label>
+          <Form.Label>Username</Form.Label>
           <Form.Control
             autoFocus
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
         </Form.Group>
         <Form.Group size="lg" controlId="password">
