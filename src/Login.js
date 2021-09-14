@@ -21,7 +21,7 @@ export default function Login() {
   return (
     <div className="Login">
       <Form onSubmit={handleSubmit}>
-        <Form.Group size="lg" controlId="email">
+        <Form.Group size="medium" controlId="email">
           <Form.Label>Username</Form.Label>
           <Form.Control
             autoFocus

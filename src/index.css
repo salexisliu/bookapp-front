@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* bookshelf css */
+#shelf {
+display: flex;
+justify-content: center;
+align-content: flex-start;
+}
+.bookspines > img {
+  
+  max-height: 250px;
+  max-width: 50px;
+
+}
+
+
+.bookspines > .shelftitles {
+  text-align: center;
+  transform: rotate(-90deg);
+  height: 140px;
+  top: 200px;
+  position:absolute;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
