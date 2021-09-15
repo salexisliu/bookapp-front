@@ -16,14 +16,7 @@ function Bookshelf(){
       .then(setUserBooks)
   }, [])
 
-  const tenbooks = userbooks.slice(start, start+15)
-
-  function forwardBooks() {
-    if (start >= userbooks.length - 10) {
-      setStart(0)
-    } else { (setStart((start) => start + 10)) }
-
-  }
+ 
 
   const deleteUserbook = (id) => {
 
@@ -41,6 +34,15 @@ function Bookshelf(){
     setUserBooks(newbooks)
   }
 
+  const tenbooks = userbooks.slice(start, start + 15)
+
+  function forwardBooks() {
+    if (start >= userbooks.length - 10) {
+      setStart(0)
+    } else { (setStart((start) => start + 10)) }
+
+  }
+
   const displaybookshelf = tenbooks.map((userbook) => 
 
   <Userbook key={userbook.id} 
@@ -56,6 +58,7 @@ return (
      <Col> <h1>Bookshelf</h1></Col>
       <Row>
         <div id="shelf"> 
+
         {displaybookshelf}
         
         </div>
