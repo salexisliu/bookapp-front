@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-function Userbook({userbook}) {
+function Userbook({userbook, deleteUserbook}) {
+
+
 
   return(<>
   
@@ -11,12 +13,13 @@ function Userbook({userbook}) {
       // width="100%"
     />
     
-    
     <h6 className="shelftitles">
       {userbook.book.title}
     </h6>
-
+<br/>
+      <button onClick={() => deleteUserbook(userbook.id)}>Delete</button>
     </div>
+   
  
    </>
   )
