@@ -22,7 +22,7 @@ return (
     <Navbar bg="success" variant="dark">
       <Container>
        
-           <Navbar.Brand href="#home">
+           <Navbar.Brand href="/">
         <img
           alt=""
           src="https://media.discordapp.net/attachments/885985129355431948/887351470834462760/image0.png"
