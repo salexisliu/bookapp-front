@@ -12,6 +12,7 @@ function Bookshelf({ userbooks, setUserBooks }) {
 
   const deleteUserbook = (id, e) => {
     e.stopPropagation();
+    e.preventDefault();
     fetch(`http://localhost:9292/userbooks/${id}?user_id=1`, {
       method: "DELETE",
     })
@@ -31,10 +32,10 @@ function Bookshelf({ userbooks, setUserBooks }) {
   const tenbooks = userbooks.slice(start, start + 15);
 
   function forwardBooks() {
-    if (start >= userbooks.length - 10) {
+    if (start >= userbooks.length - 15) {
       setStart(0);
     } else {
-      setStart((start) => start + 10);
+      setStart((start) => start + 15);
     }
   }
 

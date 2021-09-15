@@ -11,7 +11,7 @@ import React, { useState, useEffect } from "react";
 function App() {
   const [userbooks, setUserBooks] = useState([]);
   const [allbooks, setAllBooks] = useState([]);
-  // const [currentUser, setCurrentUser] = useState({});
+  const [currentUser, setCurrentUser] = useState({});
   // ${currentuser.id}
   useEffect(() => {
     fetch("http://localhost:9292/userbooks?user_id=1")
@@ -39,18 +39,20 @@ function App() {
         </Route>
 
         <Route path="/login">
-          <Login />
+          <Login currentUser={currentUser} setCurrentUser={setCurrentUser}/>
         </Route>
 
         <Route
           exact
-          path="/userbook/:id"
+          path="/userbooks/:id"
           render={({ match }) => (
+            //opens the book in YOUR BOOKSHELF
             <BookDetail
               userbook={userbooks.find(
                 (userbook) => userbook.id === parseInt(match.params.id)
-              )}
+              )} 
             />
+            
           )}
         />
       </Switch>

@@ -7,9 +7,8 @@ function BooksContainer({allbooks}) {
 console.log(allbooks)
 
   return (
-    <Container fluid id="allbooks">
-   
-      <Col xs="4">
+    <Container style={{display: 'flex', flexDirection: 'row'}} id="allbooks">
+  
       
       {allbooks.map((book) => 
 
@@ -21,8 +20,6 @@ console.log(allbooks)
       
       )
 }
-</Col>
-
     </Container>
   )
 }

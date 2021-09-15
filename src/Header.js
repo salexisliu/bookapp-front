@@ -23,8 +23,7 @@ return (
       <Container>
         <Navbar.Brand href="/">BookNook</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/bookshelf">Bookshelf</Nav.Link>
+          <Nav.Link href="/">Bookshelf</Nav.Link>
           <Nav.Link href="/browsebooks">All books</Nav.Link>
           <Nav.Link href="/login">Log in</Nav.Link>
         </Nav>
