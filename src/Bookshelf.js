@@ -14,8 +14,28 @@ function Bookshelf(){
       .then(setUserBooks)
   }, [])
 
+  const deleteUserbook = (id) => {
 
-  const displaybookshelf = userbooks.map((userbook) => <Userbook key={userbook.id} userbook={userbook} />) 
+    fetch(`http://localhost:9292/bookshelf/${id}?user_id=1`, {
+      method: 'DELETE'
+    })
+      .then(res => res.json())
+      .then(deletedUserbook => deleteBook(deletedUserbook))
+  }
+
+  function deleteBook(deletedUserbook) {
+    console.log(userbooks)
+    const newbooks = userbooks.filter(userbook => userbook.id !== deletedUserbook.id)
+    console.log(newbooks)
+    setUserBooks(newbooks)
+  }
+
+  const displaybookshelf = userbooks.map((userbook) => 
+
+  <Userbook key={userbook.id} 
+  userbook={userbook} 
+  deleteUserbook = {deleteUserbook} 
+  />) 
 
 return (
   
@@ -29,8 +49,7 @@ return (
       </Row>
     </Container>
 
-   
-
+  
   </div>
   )
 } 
