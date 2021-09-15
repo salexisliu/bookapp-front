@@ -13,25 +13,51 @@ code {
 }
 /* bookshelf css */
 #shelf {
-display: flex;
-justify-content: center;
-align-content: flex-start;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
 }
-.bookspines > img {
+
+.shelfbooks {
+ max-width: 50px;
+}
+
+.shelfbooks > img {
   
-  max-height: 250px;
-  max-width: 50px;
+  max-height: 350px;
+  max-width: 80px;
 
 }
+.shelfbooks > img:hover {
+  transform: scale(1.1)
+ 
 
+}
+#shelftitles {
 
-.bookspines > .shelftitles {
   text-align: center;
   transform: rotate(-90deg);
-  height: 140px;
-  top: 200px;
+  height: 150px;
   position:absolute;
-  justify-content: space-between;
-  align-content: flex-start;
+  top: 200px;
+  width: 170px;
+  font-size: small;
+/* 
+    transform: rotate(-90deg);
+    text-align: center;
+    
+    width: 300px;
+    height: 250px;
+    position: absolute; */
+
+  /* text-align: center;
+  transform: rotate(-90deg);
+  height: 15px;
+  top: 220px;
+  width: 150px;
+  left: 150px;
+  position: absolute;
+  */
+  /* align-content: flex-start; */
 }
 
