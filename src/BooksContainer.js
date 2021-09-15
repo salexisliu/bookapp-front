@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
 function BooksContainer({allbooks}) {
 console.log(allbooks)
 
@@ -12,11 +13,16 @@ console.log(allbooks)
       
       {allbooks.map((book) => 
 
-        <Card style={{ width: '15rem' }} style={{ flex: 1 }}>
-          <Card.Img variant="top" src={book.img_url} />
-          <Card.Title>{book.title}</Card.Title>
-          <Card.Body>sumary goes here.</Card.Body>
-      </Card>
+<Card style={{ width: '18rem' }}>
+<Card.Img variant="top" src="holder.js/100px180" />
+<Card.Body>
+  <Card.Title>Book Title</Card.Title>
+  <Card.Text>
+    Brief book description
+  </Card.Text>
+  <Button variant="primary">Go somewhere</Button>
+</Card.Body>
+</Card>
       
       )
 }
