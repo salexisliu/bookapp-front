@@ -7,7 +7,7 @@ function Userbook({userbook, deleteUserbook}) {
 
 
   return(<>
-
+ <Link to={`/book/${userbook.id}`} style={{color:"black"}}>
    <div className="shelfbooks">
      
    <img
@@ -16,9 +16,9 @@ function Userbook({userbook, deleteUserbook}) {
       <p>{userbook.id}</p>
 
     <h5 id="shelftitles">
-        <Link to={`/book/${userbook.id}`} >
+       
           {userbook.book.title}
-        </Link>
+      
         
        
       <button onClick={() => deleteUserbook(userbook.id)}>X</button>
@@ -26,7 +26,7 @@ function Userbook({userbook, deleteUserbook}) {
 
     </div>
     
-   
+    </Link>
      
    
  

@@ -11,6 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* allbooks css */
+.card {
+   max-width: 55%
+}
+.card-img-top{
+   max-width: 100%
+}
 /* bookshelf css */
 #shelf {
   display: flex;
