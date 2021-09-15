@@ -19,9 +19,19 @@ function Header() {
   // );
 return (
   <>
-    <Navbar bg="warning" variant="dark">
+    <Navbar bg="success" variant="dark">
       <Container>
-        <Navbar.Brand href="/">BookNook</Navbar.Brand>
+       
+           <Navbar.Brand href="#home">
+        <img
+          alt=""
+          src="https://media.discordapp.net/attachments/885985129355431948/887351470834462760/image0.png"
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+        />{' '}
+      BookNook
+      </Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/bookshelf">Bookshelf</Nav.Link>
