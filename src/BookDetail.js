@@ -8,8 +8,11 @@ export default function BookDetail({ userbook }) {
   return (
     <Container>
       <Col>{userbook.book.title}</Col>
-      <Col>{userbook.id}</Col>
-      {userbook.user_id}
+      <Col>userbook id:{userbook.id}</Col>
+      book id: {userbook.book_id}
+
+      <img src={userbook.book.img_url}></img>
+  
     </Container>
   );
 }

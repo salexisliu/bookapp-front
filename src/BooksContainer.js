@@ -10,7 +10,9 @@ console.log(allbooks)
     <Container fluid id="allbooks">
    
       <Col xs="4">
+      
       {allbooks.map((book) => 
+
         <Card style={{ width: '15rem' }} style={{ flex: 1 }}>
           <Card.Img variant="top" src={book.img_url} />
           <Card.Title>{book.title}</Card.Title>

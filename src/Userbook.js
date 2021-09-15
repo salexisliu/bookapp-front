@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 function Userbook({userbook, deleteUserbook}) {
 
 
-
+// this displays one book to the userbook bookshelf
   return(<>
- <Link to={`/book/${userbook.id}`} style={{color:"black"}}>
+  {/* history .push click event */}
+  <Link to={`/userbook/${userbook.id}`} style={{color:"black"}}> 
    <div className="shelfbooks">
      
    <img
@@ -19,11 +20,10 @@ function Userbook({userbook, deleteUserbook}) {
        
           {userbook.book.title}
       
-        
-       
-      <button onClick={() => deleteUserbook(userbook.id)}>X</button>
+  
     </h5>
 
+        <button onClick={(e) => deleteUserbook(userbook.id, e)}>X</button>
     </div>
     
     </Link>

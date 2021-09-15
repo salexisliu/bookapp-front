@@ -10,22 +10,23 @@ function Bookshelf({ userbooks, setUserBooks }) {
 
   console.log(userbooks);
 
-  const deleteUserbook = (id) => {
+  const deleteUserbook = (id, e) => {
+    e.stopPropagation();
     fetch(`http://localhost:9292/userbooks/${id}?user_id=1`, {
       method: "DELETE",
     })
       .then((res) => res.json())
-      .then((deletedUserbook) => deleteBook(deletedUserbook));
-  };
-
-  function deleteBook(deletedUserbook) {
-    console.log(userbooks);
-    const newbooks = userbooks.filter(
-      (userbook) => userbook.id !== deletedUserbook.id
-    );
-    console.log(newbooks);
-    setUserBooks(newbooks);
+      .then((deletedUserbook) => setUserBooks(userbooks.filter(userbook => userbook.id !== deletedUserbook.id)))
   }
+
+  // function deleteBook(deletedUserbook) {
+
+  //   const newbooks = userbooks.filter(
+  //     (userbook) => userbook.id !== deletedUserbook.id
+  //   );
+  
+  //   setUserBooks(newbooks);
+  // }
 
   const tenbooks = userbooks.slice(start, start + 15);
 
@@ -53,6 +54,7 @@ function Bookshelf({ userbooks, setUserBooks }) {
           <h1>Bookshelf</h1>
         </Col>
         <Row>
+          {/*  This is the bookshelf of userbooks */}
           <div id="shelf">{displaybookshelf}</div>
         </Row>
 

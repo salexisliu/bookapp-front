@@ -11,7 +11,8 @@ import React, { useState, useEffect } from "react";
 function App() {
   const [userbooks, setUserBooks] = useState([]);
   const [allbooks, setAllBooks] = useState([]);
-
+  // const [currentUser, setCurrentUser] = useState({});
+  // ${currentuser.id}
   useEffect(() => {
     fetch("http://localhost:9292/userbooks?user_id=1")
       .then((res) => res.json())
@@ -25,11 +26,11 @@ function App() {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/">
+        {/* <Route exact path="/">
           <Home />
-        </Route>
+        </Route> */}
 
-        <Route path="/bookshelf">
+        <Route exact path="/">
           <Bookshelf userbooks={userbooks} setUserBooks={setUserBooks} />
         </Route>
 
@@ -43,7 +44,7 @@ function App() {
 
         <Route
           exact
-          path="/book/:id"
+          path="/userbook/:id"
           render={({ match }) => (
             <BookDetail
               userbook={userbooks.find(

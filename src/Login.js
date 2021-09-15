@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-
+import Container from "react-bootstrap/Container";
 //!!
 // login placeholder code from here
 // https://serverless-stack.com/chapters/create-a-login-page.html
@@ -9,6 +9,9 @@ import Button from "react-bootstrap/Button";
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  // store as object in state 
+  
 
   function validateForm() {
     return username.length > 0 && password.length > 0;
@@ -20,6 +23,7 @@ export default function Login() {
 
   return (
     <div className="Login">
+      <Container>
       <Form onSubmit={handleSubmit}>
         <Form.Group size="medium" controlId="email">
           <Form.Label>Username</Form.Label>
@@ -42,6 +46,7 @@ export default function Login() {
           Login
         </Button>
       </Form>
+     </Container>
     </div>
   );
 }
