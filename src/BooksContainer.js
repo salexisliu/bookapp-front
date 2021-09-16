@@ -12,7 +12,9 @@ function BooksContainer({ books }) {
 
   return (
     <Container id="allbooks">
+      <Row xs={2}>
       {books.map((book) => (
+     
         <Card className="card-style" style={{ width: "18rem" }} className='box'>
           <Card.Img variant="top" src={book.img_url} />
           <Card.Body>
@@ -21,7 +23,9 @@ function BooksContainer({ books }) {
             <Button variant="primary">Add book</Button>
           </Card.Body>
         </Card>
+      
       ))}
+        </Row>
     </Container>
   );
         
