@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button'
+
+
 function Userbook({userbook, deleteUserbook}) {
 
 
@@ -26,7 +29,7 @@ function Userbook({userbook, deleteUserbook}) {
   
     </h5>
 
-        <button onClick={(e) => deleteUserbook(userbook.id, e)}>X</button>
+    <Button variant="danger" className="deletebtn" onClick={(e) => deleteUserbook(userbook.id, e)}>x</Button>
     </div>
     
     </Link>
