@@ -10,7 +10,8 @@ function Userbook({userbook, deleteUserbook}) {
   {/* history .push click event */}
 
   {/* bookshelf/userbook.id  GO TO BOOK DETAIL AND APP JS */}
-  <Link to={`/userbooks/${userbook.id}`} style={{color:"black"}}> 
+  <Link to={`/books/${userbook.book_id}`} style={{color:"black"}}> 
+  
    <div className="shelfbooks">
      
    <img
