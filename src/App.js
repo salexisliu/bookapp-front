@@ -10,7 +10,7 @@ import React, { useState, useEffect } from "react";
 
 function App() {
   const [userbooks, setUserBooks] = useState([]);
-  const [allbooks, setAllBooks] = useState([]);
+  const [books, setBooks] = useState([]);
   const [currentUser, setCurrentUser] = useState({});
   // ${currentuser.id}
   useEffect(() => {
@@ -19,8 +19,17 @@ function App() {
       .then(setUserBooks)
     fetch("http://localhost:9292/books")
       .then((res) => res.json())
-      .then(setAllBooks)
+      .then(setBooks)
   }, []);
+
+  
+  function addReview(resBook){
+ 
+    const index = books.findIndex(book => book.id  === resBook.id)
+    const newBooks = [...books.slice(0,index),resBook, ...books.slice(index+1)]
+    setBooks(newBooks)
+
+  }
 
   return (
     <Router>
@@ -35,7 +44,7 @@ function App() {
         </Route>
 
         <Route path="/browsebooks">
-          <BooksContainer allbooks = {allbooks} />
+          <BooksContainer books = {books} />
         </Route>
 
         <Route path="/login">
@@ -44,12 +53,12 @@ function App() {
 
         <Route
           exact
-          path="/userbooks/:id"
+          path="/books/:id"
           render={({ match }) => (
             //opens the book in user bookshelf
-            <BookDetail
-              userbook={userbooks.find(
-                (userbook) => userbook.id === parseInt(match.params.id)
+            <BookDetail addReview = {addReview}
+              openbook={books.find(
+                (book) => book.id === parseInt(match.params.id) 
               )} 
             />
             

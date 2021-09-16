@@ -23,6 +23,7 @@ export default function Login() {
   }
 
   return (
+    <Container>
     <form onSubmit={handleSubmit}>
       <h3>Login</h3>
 
@@ -48,6 +49,7 @@ export default function Login() {
         Forgot <a href="#">password?</a>
       </p>
     </form>
+    </Container>
   );
 }
 

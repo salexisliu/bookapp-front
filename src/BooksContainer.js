@@ -7,12 +7,12 @@ import Button from "react-bootstrap/Button";
 import { CardColumns } from "react-bootstrap";
 import "./Box.css"
 
-function BooksContainer({ allbooks }) {
-  console.log(allbooks);
+function BooksContainer({ books }) {
+  console.log(books);
 
   return (
     <Container id="allbooks">
-      {allbooks.map((book) => (
+      {books.map((book) => (
         <Card className="card-style" style={{ width: "18rem" }} className='box'>
           <Card.Img variant="top" src={book.img_url} />
           <Card.Body>
