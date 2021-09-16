@@ -41,6 +41,7 @@ export default function BookDetail({ userbook }) {
       <img src={'https://media.discordapp.net/attachments/887887430475186176/887887513539215480/image0.png?width=1285&height=885'}></img>
       <Button variant="primary">Click to see more info</Button>
   </Card>
+      {displayreviews}
     </Container>
   );
 }
