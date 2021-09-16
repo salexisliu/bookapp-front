@@ -74,3 +74,15 @@ code {
   justify-content: center;
   align-content: flex-start;
 }
+
+/* .deletebtn{
+  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  border: none;
+  background-color: blue;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 1.0rem;
+  cursor: pointer;
+  outline: 0;
+} */
