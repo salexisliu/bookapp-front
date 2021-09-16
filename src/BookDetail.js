@@ -5,6 +5,8 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Review from "./Review";
 // from app.j
+import Button from "react-bootstrap/Button";
+// from app.js
 // link from userbook.js
 export default function BookDetail({ userbook }) {
   const [book, setBook] = useState({ reviews: [] });
@@ -30,13 +32,15 @@ export default function BookDetail({ userbook }) {
 
   return (
     <Container>
-      <Card>
-        <Col>{userbook.book.title}</Col>
-        <Col>userbook id:{userbook.id}</Col>
-        <Col>book id:{userbook.book_id}</Col>
-        <img src={userbook.book.img_url}></img>
-      </Card>
-      {displayreviews}
+      <Card style={{ width: "18rem" }}>
+      <Col>{userbook.book.title}</Col>
+      <Col>Author: {userbook.book.author}</Col>
+      <Col>Page Count: {userbook.book.pages}</Col>
+
+      {/* <img src={userbook.book.img_url}></img> */}
+      <img src={'https://media.discordapp.net/attachments/887887430475186176/887887513539215480/image0.png?width=1285&height=885'}></img>
+      <Button variant="primary">Click to see more info</Button>
+  </Card>
     </Container>
   );
 }

@@ -68,3 +68,9 @@ code {
   /* align-content: flex-start; */
 }
 
+
+.card-style {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+}

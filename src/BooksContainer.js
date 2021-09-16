@@ -4,13 +4,16 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
+import { CardColumns } from "react-bootstrap";
+import "./Box.css"
+
 function BooksContainer({ allbooks }) {
   console.log(allbooks);
 
   return (
     <Container id="allbooks">
       {allbooks.map((book) => (
-        <Card style={{ width: "18rem" }}>
+        <Card className="card-style" style={{ width: "18rem" }} className='box'>
           <Card.Img variant="top" src={book.img_url} />
           <Card.Body>
             <Card.Title>{book.title}</Card.Title>
@@ -21,5 +24,7 @@ function BooksContainer({ allbooks }) {
       ))}
     </Container>
   );
+        
+
 }
 export default BooksContainer;
