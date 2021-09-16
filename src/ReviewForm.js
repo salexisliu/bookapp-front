@@ -11,7 +11,6 @@ export default function ReviewForm({addNewReview, bookid}) {
       content,
       book_id: bookid
     })
-
   }
 
 return (
