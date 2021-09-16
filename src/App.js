@@ -46,7 +46,7 @@ function App() {
           exact
           path="/userbooks/:id"
           render={({ match }) => (
-            //opens the book in YOUR BOOKSHELF
+            //opens the book in user bookshelf
             <BookDetail
               userbook={userbooks.find(
                 (userbook) => userbook.id === parseInt(match.params.id)
