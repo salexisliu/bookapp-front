@@ -54,15 +54,18 @@ code {
 /* allbooks css */
 #allcard {
    margin-bottom: 10px;
-    margin-right: px;
+    margin-right: 10px;
 }
 .card {
-   max-width: 55%;
+   max-width: 45%;
    position: absolute;
 
 }
 .card-img-top{
-   max-width: 100%
+   max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* bookshelf css */
 #shelf {
