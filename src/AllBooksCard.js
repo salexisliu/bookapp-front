@@ -19,6 +19,7 @@ function AllBooksCard({ book, addNewBookToShelf}) {
       read: false,
       book_id: book.id
       
+      
     })
   }
 

@@ -63,7 +63,7 @@ function BooksContainer({ books }) {
   return (
 
     <Container id="allbooks">
-      <Col>
+  
         <Row xs={2}>
 
           {books.map((book) => (
@@ -71,7 +71,7 @@ function BooksContainer({ books }) {
             <AllBooksCard book={book} addNewBookToShelf={addNewBookToShelf} />))}
 
         </Row>
-      </Col>
+    
     </Container>
   );
         

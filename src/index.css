@@ -5,15 +5,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ background-color: coral;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* BOOK DETAIL CSS */
+.openbook {
+
+  background-image: url("https://live.staticflickr.com/65535/51485348058_1360b7222f_c.jpg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  height: 800px;
+  max-width: 1000px;
+  position: relative;
+  
+}
+
+.list-group{
+  max-width: 225px;
+ position: absolute;
+  left: 560px;
+ top: 200px;
+}
+
+#reviewBox{
+  top: 200px;
+   position: absolute;
+}
+.review{
+  font-size: small;
+
+  max-height: 14vh;
+  overflow-y: auto;
+ 
+}
+.openbookImage{
+
+  left: 200px;
+  top: 200px;
+  position: absolute;
+  max-width: 250px;
+}
 /* allbooks css */
 .card {
-   max-width: 55%
+   max-width: 55%;
+   position: absolute;
+
 }
 .card-img-top{
    max-width: 100%
@@ -37,8 +79,6 @@ code {
 }
 .shelfbooks > img:hover {
   transform: scale(1.1)
- 
-
 }
 #shelftitles {
 
@@ -68,6 +108,15 @@ code {
   /* align-content: flex-start; */
 }
 
+#bookshelfdiv {
+  background-image: url("https://live.staticflickr.com/65535/51484450652_5dfd314317_b.jpg");
+    background-repeat: no-repeat;
+      background-position: center;
+  margin: auto;
+
+  max-width: 1000px;
+  position: relative;
+}
 
 .card-style {
   display: flex;

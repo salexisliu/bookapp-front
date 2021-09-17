@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
-import Review from "./Review";
+import ListGroup from 'react-bootstrap/ListGroup'
 import ReviewForm from "./ReviewForm";
 // from app.j
 import Button from "react-bootstrap/Button";
@@ -49,15 +48,16 @@ export default function BookDetail({ userbook }) {
 
   return (
     <Container>
-      <Card style={{ width: "18rem" }}>
-      <Col>{userbook.book.title}</Col>
-      <Col>Author: {userbook.book.author}</Col>
-      <Col>Page Count: {userbook.book.pages}</Col>
-
-      <img src={userbook.book.img_url}></img>
-      {/* <img src={'https://media.discordapp.net/attachments/887887430475186176/887887513539215480/image0.png?width=1285&height=885'}></img> */}
+     <ListGroup>
+    
+      <ListGroup.Item>{userbook.book.title}</ListGroup.Item>
+      <ListGroup.Item>Author: {userbook.book.author}</ListGroup.Item>
+      <ListGroup.Item>Page Count: {userbook.book.pages}</ListGroup.Item>
+        </ListGroup>
+      <<img src={userbook.book.img_url}></img>
+      
       <Button variant="primary">Click to see more info</Button>
-  </Card>
+
       {displayreviews}
       <ReviewForm />
     </Container>
