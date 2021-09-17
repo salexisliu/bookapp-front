@@ -22,9 +22,10 @@ export default function BookDetail({ openbook, addReview }) {
   // setReviews(bookreviews);
 
 
+  // THIS IS THE REVIEW FORM
   // this is rendering reviews on page:
   const displayreviews = openbook && bookreviews.map((bookreview) => (<>
-    <ListGroup.Item id="reviews"><b>{bookreview.user.username}</b>: {bookreview.content}</ListGroup.Item>
+    <ListGroup.Item action variant="warning" id="reviews"><b>{bookreview.user.username}</b>: {bookreview.content}</ListGroup.Item>
 
     </>
   ));
@@ -61,7 +62,7 @@ export default function BookDetail({ openbook, addReview }) {
     
      {openbook && 
           <Col>
-
+{/* this is the book details */}
        <ListGroup className="bookinfo">
               <ListGroup.Item >{openbook.title}</ListGroup.Item>
               <ListGroup.Item>Author: {openbook.author}</ListGroup.Item>
@@ -76,10 +77,13 @@ export default function BookDetail({ openbook, addReview }) {
     </Row>
     <Row></Row>
       <Row id="reviewbox">
-        <div className="review"> {displayreviews}
+
+        <ListGroup className="review">
+            <h5 style={{padding: ".5rem"}}>Reviews</h5>
+           {displayreviews}
 
           {openbook && <ReviewForm addNewReview={addNewReview} bookid={openbook.id} />}
-        </div>
+        </ListGroup>
 
       </Row>
      </Container>

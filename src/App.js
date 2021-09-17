@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Bookshelf from "./Bookshelf";
 import Header from "./Header";
 import Login from "./Login";
-import Home from "./Home";
 import BooksContainer from "./BooksContainer";
 import BookDetail from "./BookDetail";
 import React, { useState, useEffect } from "react";

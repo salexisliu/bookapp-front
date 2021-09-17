@@ -4,6 +4,7 @@ import Nextbutton from "./Nextbutton";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import PreviousButton from "./PreviousButton";
 
 function Bookshelf({ userbooks, setUserBooks }) {
   const [start, setStart] = useState(0);
@@ -52,7 +53,7 @@ function Bookshelf({ userbooks, setUserBooks }) {
       <Container id="bookshelfdiv">
         <Col>
           {" "}
-          <h1>Bookshelf</h1>
+          <h1>My Bookshelf</h1>
         </Col>
         <Row>
           {/*  This is the bookshelf of userbooks */}
@@ -66,7 +67,7 @@ function Bookshelf({ userbooks, setUserBooks }) {
         <Row>
           <Col>
             {" "}
-            <Nextbutton moreBooks={forwardBooks} />
+            <PreviousButton moreBooks={forwardBooks} />
           </Col>
           <Col xs={3}></Col>
           <Col xs={6}></Col>

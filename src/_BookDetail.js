@@ -54,9 +54,9 @@ export default function BookDetail({ userbook }) {
       <ListGroup.Item>Author: {userbook.book.author}</ListGroup.Item>
       <ListGroup.Item>Page Count: {userbook.book.pages}</ListGroup.Item>
         </ListGroup>
-      <<img src={userbook.book.img_url}></img>
+      <img src={userbook.book.img_url}></img>
       
-      <Button variant="primary">Click to see more info</Button>
+      <Button variant="success">Click to see more info</Button>
 
       {displayreviews}
       <ReviewForm />
