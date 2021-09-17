@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import InputGroup from "react-bootstrap/InputGroup";
 
 export default function ReviewForm({addNewReview, bookid}) {
   const [content, setContent] = useState("")
@@ -11,11 +13,15 @@ export default function ReviewForm({addNewReview, bookid}) {
       content,
       book_id: bookid
     })
+    
+    setContent("")
+
   }
 
 return (
-  <form onSubmit={handleSubmit}>
-     <label htmlFor="review">Write a review</label><br/>
+  <Form onSubmit={handleSubmit}>
+    <Form.Label htmlFor="review">Write a review</Form.Label><br/>
+    <InputGroup size="sm">
         <input
           type="text"
           id="content"
@@ -23,8 +29,9 @@ return (
           onChange={(e) => setContent(e.target.value)}
           value={content}
         />
-    <button type="submit">Submit</button>
-  </form>
+    </InputGroup>
+    <Button size="sm" id="button-addon1" type="submit">Submit</Button>
+  </Form>
 )
   
 }

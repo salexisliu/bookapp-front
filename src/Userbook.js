@@ -20,7 +20,7 @@ function Userbook({userbook, deleteUserbook}) {
    <img
       src={userbook.book.bookspine_img}
       alt={userbook.book.title} />
-      <p>{userbook.id}</p>
+<p></p>
 
     <h5 id="shelftitles">
        

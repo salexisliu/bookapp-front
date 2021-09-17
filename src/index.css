@@ -5,18 +5,67 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ background-color: #C7AD7F !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* BOOK DETAIL CSS */
+.openbook {
+
+  background-image: url("https://i.postimg.cc/qR9FhcY6/51485348058-5be153b74f-o.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  height: 800px;
+  max-width: 1000px;
+  position: relative;
+  
+}
+
+.list-group{
+  max-width: 225px;
+ position: absolute;
+  left: 560px;
+ top: 200px;
+}
+
+#reviewBox{
+  top: 200px;
+   position: absolute;
+}
+.review{
+  font-size: small;
+
+  max-height: 14vh;
+  overflow-y: auto;
+ 
+}
+.openbookImage{
+
+  left: 200px;
+  top: 200px;
+  position: absolute;
+  max-width: 250px;
+}
 /* allbooks css */
+#allcard {
+   margin-bottom: 10px;
+    margin-right: 10px;
+}
 .card {
-   max-width: 55%
+   max-width: 45%;
+   position: absolute;
+
 }
 .card-img-top{
-   max-width: 100%
+   max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* bookshelf css */
 #shelf {
@@ -37,8 +86,6 @@ code {
 }
 .shelfbooks > img:hover {
   transform: scale(1.1)
- 
-
 }
 #shelftitles {
 
@@ -68,11 +115,21 @@ code {
   /* align-content: flex-start; */
 }
 
+#bookshelfdiv {
+  background-image: url("https://live.staticflickr.com/65535/51484450652_5dfd314317_b.jpg");
+    background-repeat: no-repeat;
+      background-position: center;
+  margin: auto;
+
+  max-width: 1000px;
+  position: relative;
+}
 
 .card-style {
   display: flex;
   justify-content: center;
   align-content: flex-start;
+  padding: 10px;
 }
 
 /* .deletebtn{
