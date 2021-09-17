@@ -45,6 +45,8 @@ export default function BookDetail({ openbook, addReview }) {
       .then((resBook) => addReview(resBook))
     }
 
+    //resbook: {id: 3, title: 'The Midnight Library', author: 'Matt Haig', img_url: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1536852275l/41063454.jpg', bookspine_img: 'https://i.ibb.co/41QkH4c/bookorange.png', …}
+
 
   return ( //short circuit operator
     //if open book, show else: loading..
