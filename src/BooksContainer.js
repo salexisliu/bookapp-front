@@ -64,7 +64,7 @@ function BooksContainer({ books }) {
 
     <Container id="allbooks">
   
-        <Row xs={2}>
+        <Row >
 
           {books.map((book) => (
           

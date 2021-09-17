@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- background-color: coral;
+ background-color: #C7AD7F !important;
 }
 
 code {
@@ -15,7 +15,7 @@ code {
 /* BOOK DETAIL CSS */
 .openbook {
 
-  background-image: url("https://live.staticflickr.com/65535/51485348058_1360b7222f_c.jpg");
+  background-image: url("https://i.postimg.cc/qR9FhcY6/51485348058-5be153b74f-o.png");
 
   background-repeat: no-repeat;
   background-position: center;
@@ -52,6 +52,10 @@ code {
   max-width: 250px;
 }
 /* allbooks css */
+#allcard {
+   margin-bottom: 10px;
+    margin-right: px;
+}
 .card {
    max-width: 55%;
    position: absolute;
@@ -122,6 +126,7 @@ code {
   display: flex;
   justify-content: center;
   align-content: flex-start;
+  padding: 10px;
 }
 
 /* .deletebtn{

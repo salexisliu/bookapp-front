@@ -25,14 +25,13 @@ function AllBooksCard({ book, addNewBookToShelf}) {
 
   return (
 
-    <Card className="card-style" style={{ width: "18rem" }} className='box'>
+    <Card id="allcard" style={{ width: "18rem", padding: "5px"}} >
+      <Card.Header></Card.Header>
       <Link to={`/books/${book.id}`} style={{ color: "black" }}>  <Card.Img variant="top" src={book.img_url} />    </Link>
       <Card.Body>
         <Card.Title>{book.title}</Card.Title>
-        <Card.Text>Brief book description</Card.Text>
+        <Card.Text>Summary</Card.Text>
         <Button variant="primary" size="sm" onClick={handleAddClick}> Add to shelf</Button>
-
-
       </Card.Body>
     </Card>
   )
