@@ -7,6 +7,7 @@ import "./Box.css"
 
 
 function BooksContainer({ books }) {
+  const [error, setError] = useState(null)
   // const [content, setContent] = useState("")
 
   // const handleSubmit = (e) => {
@@ -30,7 +31,15 @@ function BooksContainer({ books }) {
     })
     .then(res => res.json())
       .then((newbook) => console.log(newbook))
+      .catch(res => {
+        setError(res.error);
+      })
     }
+
+    if (error !== null) {
+      alert("This book is already in your shelf!")
+    }
+  
 
   
 
