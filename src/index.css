@@ -20,17 +20,20 @@ code {
   background-repeat: no-repeat;
   background-position: center;
   margin: auto;
-  height: 800px;
+  top: -5px;
+  height: 500px;
   max-width: 1000px;
   position: relative;
   
 }
 
 .list-group{
-  max-width: 225px;
+  max-width: 255px;
  position: absolute;
   left: 560px;
- top: 200px;
+ top: 150px;
+ overflow-y: auto;
+ 
 }
 
 #reviewBox{
@@ -39,15 +42,17 @@ code {
 }
 .review{
   font-size: small;
+  top: 515px;
+  left: 10px;
+  max-height: 25vh;
+  max-width: 200px;
+  width: 100px;
 
-  max-height: 14vh;
-  overflow-y: auto;
- 
 }
 .openbookImage{
 
   left: 200px;
-  top: 200px;
+  top: 40px;
   position: absolute;
   max-width: 250px;
 }

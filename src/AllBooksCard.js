@@ -7,6 +7,7 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import "./Box.css"
 import { Link } from 'react-router-dom';
+import { MdAddToPhotos } from 'react-icons/md'
 
 
 function AllBooksCard({ book, addNewBookToShelf}) {
@@ -30,8 +31,8 @@ function AllBooksCard({ book, addNewBookToShelf}) {
       <Link to={`/books/${book.id}`} style={{ color: "black" }}>  <Card.Img variant="top" src={book.img_url} />    </Link>
       <Card.Body>
         <Card.Title>{book.title}</Card.Title>
-        <Card.Text>Summary</Card.Text>
-        <Button variant="primary" size="sm" onClick={handleAddClick}> Add to shelf</Button>
+        <Card.Text>{book.author}</Card.Text>
+        <Button variant="success" size="sm" onClick={handleAddClick}> Add to Shelf <MdAddToPhotos/></Button>
       </Card.Body>
     </Card>
   )
