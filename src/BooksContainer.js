@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button";
-import { CardColumns } from "react-bootstrap";
+import AllBooksCard from "./AllBooksCard";
 import "./Box.css"
-import { Link } from 'react-router-dom';
+
 
 function BooksContainer({ books }) {
   // const [content, setContent] = useState("")
@@ -20,36 +18,54 @@ function BooksContainer({ books }) {
   //   })
   // }
 
+  function addNewBookToShelf(formData){
+    console.log(formData)
+    const body = JSON.stringify(formData)
+    fetch("http://localhost:9292/userbooks", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body
+    })
+    .then(res => res.json())
+      .then((newbook) => console.log(newbook))
+    }
 
   
+
+  // const addNewReview = (formData) => {
+  //   console.log(formData)
+  //   const body = JSON.stringify(formData)
+  //   fetch("http://localhost:9292/reviews", {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body
+  //   })
+  //     .then(res => res.json())
+  //     // .then((newreview) => console.log(newreview))
+  //     .then((resBook) => addReview(resBook))
+  // }
+
   console.log(books);
 
   return (
+
     <Container id="allbooks">
-            <Col><Row xs={2}>
+      <Col>
+        <Row xs={2}>
 
-      {books.map((book) => (
+          {books.map((book) => (
+          
+            <AllBooksCard book={book} addNewBookToShelf={addNewBookToShelf} />))}
 
-  
-     
-        <Card className="card-style" style={{ width: "18rem" }} className='box'>
-          <Link to={`/books/${book.id}`} style={{ color: "black" }}>  <Card.Img variant="top" src={book.img_url} />    </Link>
-         <Card.Body>
-            <Card.Title>{book.title}</Card.Title>
-            <Card.Text>Brief book description</Card.Text>
-            <Button variant="primary" size="sm">Add to shelf</Button>
-     
-    
-          </Card.Body>  
-        </Card>
-      
-  
-      ))}
-  
-      </Row>    </Col>
+        </Row>
+      </Col>
     </Container>
   );
         
+          }
 
-}
 export default BooksContainer;
